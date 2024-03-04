@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1º Aula de java</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+<body>
+        <div class="container">
+            <div class="row text-center">
+                <h2>Formularios com botões</h2>
+            </div>
+        </div>
+    <form action="" obsubmit="return false">
+        <div class="container">
+            <div class="row">
+                <div class="row text-center">
+                    <h3>Formulario 1</h3>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <input type="text" name="txtfrm1" id="txtfrm1">
+                    <button class="btn btn-success" onclick="Mensagem2();" onblur="Mensagem1();">Botão 1</button>
+                    <button class="btn btn-primary"> Botão 2</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form action="" obsubmit="return false" id="frmForm">
+        <div class="container">
+            <div class="row">
+                <div class="row text-center">
+                    <h3>Formulario 2</h3>
+                </div>
+                <div class="col-sm-12">
+                   <p><label for="txtnome">Nome aleatório</label></p>
+                   <p><input type="text" name="txtnome" id="txtnome" class="form-control"></p>
+                   <P><button name="btoOk" id="btoOk" class="btn btn-success" onclick="Dados();">Ok</button></P>
+                   <P id="mostrarDados"></P>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        function Mensagem1()
+        {
+            alert("Testando");
+        }
+        function Mensagem2()
+        {
+            alert("Testando o click");
+        }
+        function Dados()
+        {
+            let caixa = document.getElementById("txtnome");
+            let Resultado = document.getElementById("mostrarDados");
+
+            Resultado.innerHTML = caixa.value;
+        }
+    </script>
+</body>
+</html>

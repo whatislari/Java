@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média escolar</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <form action="" class="form-control" onsubmit="return false" id="frmform">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1>Média Escolar</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 mx-auto">
+                    <p><input type="number" name="txtn1" id="txtn1" class="form-control" placeholder="Numero 1"></p>
+                </div>
+    
+                <div class="col-sm-3 mx-auto">
+                    <p><input type="number" name="txtn2" id="txtn2" class="form-control" placeholder="Numero 2"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 mx-auto">
+                    <p><input type="number" name="txtn3" id="txtn3" class="form-control" placeholder="Numero 3"></p>
+                </div>
+    
+                <div class="col-sm-3 mx-auto">
+                    <p><input type="number" name="txtn4" id="txtn4" class="form-control" placeholder="Numero 4"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-auto text-center">
+                <button name="btocal" id="btocal" class="btn btn-success" onclick="cal();">Calcular</button>
+            </div>
+            <div class="col-sm-auto text-center">
+                <button name="btolimp" id="btolimp" class="btn btn-danger" onclick="limp();">Limpar</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 offset-sm-3 text-center"> 
+                    <h1>Resultado</h1>
+                    <hr>
+                    <p id="resul" class="text-center">0</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+<body>
+<form action="" class="form-control" onsubmit="return false" id="frmform">
+    <div class="container">
+        <div class="row">
+            <hr>
+            <div class="col-sm-12 text-center">
+                <h1>Mini Calculadora</h1>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <p>
+                    &nbsp;
+                </p>
+            </div>
+            <div class="col-sm-2">
+                <p><input type="number" name="txtn1" id="txtn1" class="form-control" placeholder="Numero 1"></p>
+            </div>
+
+            <div class="col-sm-2">
+                <p><input type="number" name="txtn2" id="txtn2" class="form-control" placeholder="Numero 2"></p>
+            </div>
+            <div class="col-sm-4">
+                <p>
+                    &nbsp;
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <p>
+                    &nbsp;
+                </p>  
+            </div>
+            <div class="col-sm-4">
+                <button name="btomais" id="btomais" class="btn btn-success text-end" onclick="mais();"> + </button>
+                <button name="btomenos" id="btomenos" class="btn btn-success" onclick="menos();"> - </button>
+
+                <button name="btovezes" id="btovezes" class="btn btn-success" onclick="vezes();"> * </button>
+
+                <button name="btodividir" id="btodividir" class="btn btn-success" onclick="dividir();"> / </button>
+                <button name="btoCE" id="btoCE" class="btn btn-danger" onclick="CE();"> CE </button>
+            </div>
+            <div class="col-sm-4">
+                <p>
+                    &nbsp;
+                </p>  
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <hr>
+                            <p id="resul">0</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="js/bootstrap.js"></script>
+
+<script>
+    let n1 = document.getElementById("txtn1");
+    let n2 = document.getElementById("txtn2");
+
+    function mais() 
+    {
+        let resul = parseFloat(n1.value) + parseFloat(n2.value);
+        document.getElementById("resul").innerText = resul;
+    }
+
+    function menos() 
+    {
+        let resul = parseFloat(n1.value) - parseFloat(n2.value);
+        document.getElementById("resul").innerText = resul;
+    }
+
+    function vezes() 
+    {
+        let resul = parseFloat(n1.value) * parseFloat(n2.value);
+        document.getElementById("resul").innerText = resul;
+    }
+
+    function dividir() 
+    {
+        let resul = parseFloat(n1.value) / parseFloat(n2.value);
+        document.getElementById("resul").innerText = resul;
+    }
+
+    function CE() 
+    {
+        n1.value = "";
+        n2.value = "";
+        document.getElementById("resul").innerText = "0";
+    }
+</script>
+
+
+
+</body>
+</html>
