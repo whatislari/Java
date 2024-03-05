@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade teste</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body> 
+    <form action="" class="form-control" onsubmit="return false" name="formulario" id="frmform" method="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p><h2>Teste da atividade</h2></p>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="col-sm-12 text-center">
+            <div class="row">
+                <p><input type="text" name="nome" id="nome" class="form-control" placeholder="Nome"></p>
+            </div>
+        </div>
+        <div class="col-sm-auto text-center">
+            <button name="btoEnviar" id="Enviar" class="btn btn-success" onclick="Enviar();">Enviar</button>
+        </div>
+        
+        <script src="js/bootstrap.js"></script>
+        <script>
+            let formulario = document.getElementById("frmform")
+            let nome = document.getElementById("nome")
+
+            function Enviar()
+            {
+                console.log("Clicou no enviar")
+                if(nome.value == "")
+                {
+                    nome.focus
+                    return;
+                }
+
+                formulario.action="teste.php"
+	            formulario.submit()
+            }
+        </script>
+    </form>
+</body>
+</html>

@@ -38,24 +38,32 @@
                 </div>
             </div>
         </div>
-
+        <div class="col-sm-2">
+            &nbsp;
+        </div>
         <div class="row justify-content-center">
             <div class="col-sm-auto text-center">
-                <button name="btocal" id="btocal" class="btn btn-success" onclick="cal();">Calcular</button>
+                <button name="btocal" id="btocal" class="btn btn-success" onclick="media();">Calcular</button>
             </div>
             <div class="col-sm-auto text-center">
                 <button name="btolimp" id="btolimp" class="btn btn-danger" onclick="limp();">Limpar</button>
             </div>
         </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 offset-sm-3 text-center"> 
-                    <h1>Resultado</h1>
-                    <hr>
-                    <p id="resul" class="text-center">0</p>
-                    <hr>
-                </div>
+        <div class="col-sm-2">
+            &nbsp;
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                &nbsp;
+            </div>
+            <div class="col-sm-4">
+                <p><input readonly type="number" name="txtnota" id="nota" class="form-control" placeholder="Nota"></p>
+            </div>
+            <div class="col-sm-4">
+                <p><input readonly type="text" name="txtstatus" id="stat" class="form-control" placeholder="Status"></p>
+            </div>
+            <div class="col-sm-2">
+                &nbsp;
             </div>
         </div>
     <script src="js/bootstrap.js"></script>
@@ -68,9 +76,26 @@
 
         let resul = 0;
 
-        function n1()
+        function media()
         {
+            resul = (parseFloat(n1.value) + parseFloat(n2.value) + parseFloat(n3.value) + parseFloat(n3.value))/4;
+            document.getElementById("nota").value = resul
 
+            if(resul <= 5)
+            {
+                document.getElementById("stat").value = "Reprovado"
+                document.getElementById("stat").style.color = '#d00'
+            }
+            else if(reusl >= 7)
+            {
+                document.getElementById("stat").value = "Aprovado"
+                document.getElementById("stat").style.color = '#d00'
+            }
+            else
+            {
+                document.getElementById("stat").value = "Exame"
+                document.getElementById("stat").style.color = '#d00'
+            }
         }
         
     </script>
