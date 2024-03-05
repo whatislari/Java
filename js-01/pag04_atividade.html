@@ -23,15 +23,15 @@
             </div>
         </div>
         <div class="col-sm-auto text-center">
-            <button name="btoEnviar" id="Enviar" class="btn btn-success" onclick="Enviar();">Enviar</button>
+            <button name="btoEnviar" id="Enviar" class="btn btn-success" onclick="joaquin();">Enviar</button>
         </div>
-        
+    </form>
         <script src="js/bootstrap.js"></script>
         <script>
             let formulario = document.getElementById("frmform")
             let nome = document.getElementById("nome")
 
-            function Enviar()
+            function joaquin()
             {
                 console.log("Clicou no enviar")
                 if(nome.value == "")
@@ -44,6 +44,5 @@
 	            formulario.submit()
             }
         </script>
-    </form>
 </body>
 </html>
